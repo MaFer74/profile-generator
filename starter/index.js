@@ -125,8 +125,6 @@ function createTeam() {
   });
 }
 
-
-
 // function to generate engineer
 
 function showEngineer() {
@@ -161,6 +159,18 @@ function showIntern() {
 
 // function to generate menu
 
+function showMenu() {
+  inquirer.prompt(menuOptions).then((menuAnswers) => {
+    console.log(menuAnswers);
+    if (menuOptions.menu === "Engineer") {
+      showEngineer();
+    } else if (menuOptions.menu === "Intern") {
+      showIntern();
+    } else {
+      writeToFile("index.HTML", render(team));
+    }
+  });
+}
 
 // function call to initialize program
 createTeam();
