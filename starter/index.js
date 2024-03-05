@@ -89,7 +89,7 @@ const menuOptions = [
     type: "list",
     name: "menu",
     message: "choose your option or finish",
-    choices: ["manager", "engineer", "intern", "employee"],
+    choices: ["Engineer", "Intern", "Finish"],
   },
 ];
 
@@ -113,7 +113,6 @@ function writeToFile(fileName, data) {
 function createTeam() {
   inquirer.prompt(managerQuestions).then((managerAnswers) => {
     console.log(managerAnswers);
-
     const manager = new Manager(
       managerAnswers.name,
       managerAnswers.id,
@@ -162,9 +161,9 @@ function showIntern() {
 function showMenu() {
   inquirer.prompt(menuOptions).then((menuAnswers) => {
     console.log(menuAnswers);
-    if (menuOptions.menu === "Engineer") {
+    if (menuAnswers.menu === "Engineer") {
       showEngineer();
-    } else if (menuOptions.menu === "Intern") {
+    } else if (menuAnswers.menu === "Intern") {
       showIntern();
     } else {
       writeToFile("index.HTML", render(team));
