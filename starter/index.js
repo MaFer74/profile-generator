@@ -135,7 +135,7 @@ function showEngineer() {
       engineerAnswers.email,
       engineerAnswers.github
     );
-    team.push(Engineer);
+    team.push(engineer);
     showMenu();
   });
 }
@@ -149,9 +149,9 @@ function showIntern() {
       internAnswers.name,
       internAnswers.id,
       internAnswers.email,
-      internAnswers.school,
+      internAnswers.school
     );
-    team.push(Intern);
+    team.push(intern);
     showMenu();
   });
 }

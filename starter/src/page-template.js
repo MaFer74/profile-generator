@@ -21,7 +21,7 @@ const generateTeam = (team) => {
   };
 
   // creates the html for engineers
-  const generateEngineer = (engineer) => {
+  const generateEngineer = engineer => {
     return `
         <div class="card employee-card">
     <div class="card-header">
@@ -40,7 +40,7 @@ const generateTeam = (team) => {
   };
 
   // creates the html for interns
-  const generateIntern = (intern) => {
+  const generateIntern = intern => {
     return `
         <div class="card employee-card">
     <div class="card-header">
@@ -61,17 +61,17 @@ const generateTeam = (team) => {
   const html = [];
 
   html.push(team
-      .filter((employee) => employee.getRole() === "Manager")
-      .map((manager) => generateManager(manager))
+      .filter(employee => employee.getRole() === "Manager")
+      .map(manager => generateManager(manager))
   );
   html.push(team
-      .filter((employee) => employee.getRole() === "Engineer")
-      .map((engineer) => generateEngineer(engineer))
+      .filter(employee => employee.getRole() === "Engineer")
+      .map(engineer => generateEngineer(engineer))
       .join("")
   );
   html.push(team
-      .filter((employee) => employee.getRole() === "Intern")
-      .map((intern) => generateIntern(intern))
+      .filter(employee => employee.getRole() === "Intern")
+      .map(intern => generateIntern(intern))
       .join("")
   );
 
@@ -80,7 +80,7 @@ const generateTeam = (team) => {
 };
 
 // exports function to generate entire page
-module.exports = (team) => {
+module.exports = team => {
 
   return `
     <!DOCTYPE html>
