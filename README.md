@@ -5,6 +5,8 @@
 
 The task requested was using the given starter code and convert it into a working Node.js command-line application, develope an application that will take in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person with a quick access to their emails and GitHub profiles.
 
+![live link](https://mafer74.github.io/profile-generator/)
+
 
 ## Table of Contents (Optional)
 
