@@ -7,6 +7,8 @@ The task requested was using the given starter code and convert it into a workin
 
 ![live link](https://mafer74.github.io/profile-generator/)
 
+https://mafer74.github.io/profile-generator/
+
 
 ## Table of Contents (Optional)
 
